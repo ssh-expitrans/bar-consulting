@@ -295,7 +295,7 @@ html {
     transition: max-height 0.2s ease, opacity 0.2s ease;
     opacity: 0;
     padding-left: 1rem;
-    margin-top: 10px;
+    padding-top: 10px;
   }
   
   .faq-item.active .faq-answer {

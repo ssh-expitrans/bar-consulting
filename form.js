@@ -7,7 +7,12 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     let email = document.getElementById("email").value;
     let message = document.getElementById("message").value;
   
-    if (name && email && message) {
+    if (email === "" && phone === "") {
+        event.preventDefault(); // Prevent form submission
+        alert("Please provide either an email or a phone number.");
+    }
+
+    if (name && message) {
       alert("Thank you for your message! We will get back to you soon.");
       // Here, you can add the logic to send the form data to your server.
       // For example, you can use AJAX or a form-handling service like Formspree.
@@ -16,4 +21,5 @@ document.getElementById("contactForm").addEventListener("submit", function(event
       alert("Please fill out all required fields.");
     }
   });
-  
+
+

@@ -136,7 +136,7 @@ html {
   .cta:hover {
     background: #222; /* Slightly lighter background on hover */
   }
-  
+
   .cta h2 {
     font-size: 2rem;
     text-transform: uppercase;
@@ -237,6 +237,12 @@ html {
     border-radius: 4px;
     background-color: #222; /* Dark background for inputs */
     color: #f0f0f0; /* Light text color */
+    margin-left: auto;
+    margin-right: auto;
+    display: block; /* Ensures inputs take up the full width */
+    width: 100%; /* Make inputs responsive */
+    max-width: 100%; /* Prevents overflow */
+    box-sizing: border-box;
   }
   
   button.submit-btn {
@@ -252,5 +258,57 @@ html {
   
   button.submit-btn:hover {
     background-color: #e07000; /* Darker orange on hover */
+  }
+  
+
+  .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+    border-radius: 10px;
+  }
+  
+  .faq-item {
+    border-bottom: 1px solid #444;
+    padding: 1rem 0;
+  }
+  
+  .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease, opacity 0.2s ease;
+    opacity: 0;
+    padding-left: 1rem;
+    margin-top: 10px;
+  }
+  
+  .faq-item.active .faq-answer {
+    max-height: 300px; /* adjust based on expected content size */
+    opacity: 1;
+  }
+  
+  .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-item.active .arrow {
+    transform: rotate(90deg);
   }
   

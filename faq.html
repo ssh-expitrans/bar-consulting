@@ -24,43 +24,40 @@
             <ul>
                 <li><a href="index.html#services">WHAT WE DO</a></li>
                 <li><a href="index.html#cta">CONTACT</a></li> 
-                <li><a href="faq.html">FAQ</a></li> 
+                <li><a href="#">FAQ</a></li> 
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="contact-form-section">
-          <div class="container">
-            <h2>Schedule a Consultation</h2>
-            <p>Fill out the form below to schedule a consultation. We’ll get back to you as soon as possible.</p>
-    
-            <form id="contactForm" class="contact-form">
-              <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" required>
+        <!-- FAQ Page -->
+        <div class="faq-container">
+            <h2>FREQUENTLY ASKED QUESTIONS</h2>
+          
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>What services do you offer?</span>
+                <span class="arrow">▶</span>
+              </button>
+              <div class="faq-answer">
+                We offer consulting for bar marketing, design, operations, events, and more.
               </div>
-              <div class="form-group">
-                <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" required>
+            </div>
+          
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>How do I get started?</span>
+                <span class="arrow">▶</span>
+              </button>
+              <div class="faq-answer">
+                You can fill out the form on our contact page or email us directly to schedule a consultation.
               </div>
-              <div class="form-group">
-                <label for="phone">Your Phone Number</label>
-                <input type="tel" id="phone" name="phone">
-              </div>
-              <div class="form-group">
-                <label for="date">Preferred Consultation Date</label>
-                <input type="date" id="date" name="date" required>
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-              </div>
-              <button type="submit" class="submit-btn">Submit</button>
-            </form>
+            </div>
+          
+            <!-- Add more FAQ items as needed -->
           </div>
-        </section>
-      </main>
+          
+    </main>
       
     <!-- Footer Section -->
     <footer id="about">
@@ -86,8 +83,7 @@
         once: true     // animate only once
       });
     </script>
-
-<script src="form.js"></script>
+<script src="faq.js"></script>
 
 </body>
 </html>

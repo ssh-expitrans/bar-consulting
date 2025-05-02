@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Bar Consulting</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+      <h1>
+        <!-- Logo is clickable and links to the home page -->
+        <div class="logo">
+            <a href="#">Bar Consulting</a>
+        </div>
+      </h1>        
+      <nav>
+            <ul>
+                <li><a href="#services">WHAT WE DO</a></li>
+                <li><a href="#cta">CONTACT</a></li> <!-- Link to the CTA section -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" data-aos="fade-up">
+          <h2>Helping Bars Succeed</h2>
+          <p>We specialize in streamlining bar operations, developing efficient drink programs, and creating standout bar experiences. Whether you're starting fresh or leveling up, we’re your behind-the-bar partner.</p>
+        </section>
+      
+        <!-- Services Section -->
+        <section id="services" class="services" data-aos="fade-up" data-aos-delay="100">
+          <h2>Our Services</h2>
+          <div class="service-grid">
+            <div class="service-box">
+              <h3>Bar Setup & Design</h3>
+              <p>From bar layout to equipment sourcing, we help you build a bar that’s functional and fast.</p>
+            </div>
+            <div class="service-box">
+              <h3>Bartender Training</h3>
+              <p>We provide hands-on training to get your team pouring with speed, precision, and personality.</p>
+            </div>
+            <div class="service-box">
+              <h3>Menu & Beverage Consulting</h3>
+              <p>Signature cocktail menus, pricing strategies, and sourcing — we’ll craft a program that sells.</p>
+            </div>
+          </div>
+        </section>
+      
+        <!-- Call to Action -->
+        <a href="form.html" class="cta-link">
+            <section id="cta" class="cta" data-aos="fade-up">
+                <h2>Ready to Raise the Bar?</h2>
+                <p>Let’s make your bar the place everyone talks about. Reach out to schedule a free consultation.</p>
+            </section>
+        </a>
+
+      </main>
+      
+    <!-- Footer Section -->
+    <footer id="about">
+      <div class="footer-columns">
+        <div class="footer-about">
+          <h3>About</h3>
+          <ul>
+            <li><a href="form.html">Contact</a></li> <!-- Updated link to form.html -->
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Social Media</a></li>
+          </ul>
+        </div>
+      </div>
+    
+      <p class="footer-copy">&copy; 2025 Bar Consulting. All rights reserved.</p>
+    </footer>
+    
+    <!-- AOS Animation JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 700, // smoothness
+        once: true     // animate only once
+      });
+    </script>
+</body>
+</html>

@@ -87,10 +87,11 @@ html {
   }
 
   .hero {
-    min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
     padding: 0 5vw;
     color: white;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);

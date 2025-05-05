@@ -152,6 +152,13 @@ html {
     max-width: 1000px;
     margin: 0 auto;
   }
+/* Ensure all elements use the border-box model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
   
   .service-box {
     background-color: #222; /* Dark background for service boxes */
@@ -251,10 +258,16 @@ html {
     margin: 0;
   }
   
+    /* Footer Links */
   .footer-about a {
-    color: #ff8c00; /* Orange footer link */
+    color: #ff8c00; /* Initial color */
     display: block;
     margin: 0.5rem 0;
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+
+  .footer-about a:hover {
+    color: #f0f0f0; /* Color when hovered */
   }
   
   .footer-copy {
@@ -382,4 +395,24 @@ html {
 /* Lighten the About heading in the footer */
 footer h3 {
   color: #f5f5f5; /* Match this to your existing footer text color */
+}
+
+/* For mobile screens */
+@media screen and (max-width: 767px) {
+  /* Adjust padding in the CTA section for smaller screens */
+  .cta {
+    padding: 2rem 1rem; /* Adjust the padding to fit better on mobile */
+  }
+
+  /* Make sure the button takes up the full width on mobile */
+  .cta-button {
+    width: 100%; /* Ensure the button spans full width */
+    padding: 1rem; /* Adjust the padding inside the button */
+  }
+
+  /* Ensure the CTA section content is properly aligned */
+  .cta h2, .cta p {
+    font-size: 1.2rem; /* Slightly smaller text */
+    text-align: center; /* Center the text for a better look on mobile */
+  }
 }

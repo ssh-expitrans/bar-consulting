@@ -5,6 +5,8 @@ html {
   /* Base Styles */
   body {
     margin: 0;
+    padding: 0;
+    overflow-x: hidden;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background: url('martini.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -205,22 +207,27 @@ html {
     line-height: 1.6;
   }
   
-  .cta-button {
-    display: inline-block;
-    padding: 0.75rem 2rem;
-    background-color: #ff8c00; /* Bright orange for button */
-    color: #222;
+  .cta-link {
+    display: block;
+    width: 100%;
+    color: #ff8c00;
     font-weight: bold;
     text-transform: uppercase;
-    border-radius: 4px;
     letter-spacing: 1px;
+    padding: 1rem;
+    background-color: transparent;
+    border: 2px solid #ff8c00;
+    text-align: center;
+    border-radius: 4px;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   
-  .cta-button:hover {
-    background-color: #e07000; /* Darker orange on hover */
-    color: #fff;
+  .cta-link:hover {
+    background-color: #ff8c00;
+    color: #222;
   }
+  
+  
   
   /* Footer */
   footer {

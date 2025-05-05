@@ -12,7 +12,10 @@ html {
     background-size: cover;
   }
   
-  
+  * {
+    box-sizing: border-box;
+  }
+
   a {
     color: inherit;
     text-decoration: none;
@@ -415,6 +418,26 @@ footer h3 {
   .cta h2, .cta p {
     font-size: 1.2rem; /* Slightly smaller text */
     text-align: center; /* Center the text for a better look on mobile */
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero {
+    padding-top: 80px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .some-wide-section {
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 }
 

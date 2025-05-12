@@ -1,10 +1,11 @@
 :root {
-  --color-bg: #cc9966; /* Soft cream background */
-  --color-panel: #9C6137; /* Warm beige panel */
-  --color-text: #5C4033; /* Rich dark brown text */
-  --color-accent: #A97456; /* Medium brown for accents */
-  --color-hover: #C3A38F; /* Light brown for hover effects */
+  --color-bg: #644536; /* Soft, creamy beige background */
+  --color-panel: #B87A4A; /* Rich brown panel for depth */
+  --color-text: #ffdeaa; /* Dark brown text for readability */
+  --color-accent: #d4aa7d; /* Light tan/golden accent for highlights */
+  --color-border: #9e6240; /* Warm, soft border color */
 }
+
 
 
 html {
@@ -26,7 +27,7 @@ html {
   }
 
   a {
-    color: var(--color-accent);
+    color: var(--color-text);
     text-decoration: none;
   }
   
@@ -40,7 +41,6 @@ html {
     align-items: center;
     background-color: var(--color-panel);
     padding: 1.5rem 2rem;
-    background: transparent !important; /* Ensures header is fully transparent */
     border-bottom: 2px solid var(--color-accent);  /* Add a thin line at the bottom of the nav */
     box-sizing: border-box;
     z-index: 1000; /* Keeps the header above other content */
@@ -51,7 +51,7 @@ html {
     font-weight: bold;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--color-accent); /* Light logo color for contrast */
+    color: var(--color-text); /* Light logo color for contrast */
   }
 
   .nav-item {
@@ -69,9 +69,6 @@ html {
   }
   
   
-  nav {
-    background: transparent !important; /* Ensure nav background is transparent */
-  }
   
   nav ul {
     list-style: none;
@@ -108,7 +105,8 @@ html {
     flex-direction: column;
     justify-content: center;
     position: relative;
-    padding: 0 8vw;
+    margin-top: 80px;
+    padding: 6rem 2rem;
     color: var(--color-text);
   }
   
@@ -135,15 +133,21 @@ html {
     }
   }
   
-  /* For larger screens (desktop), remove the parallax effect */
-  @media screen and (min-width: 768px) {
-    body {
-      background-attachment: fixed;  /* Removes parallax effect for desktop */
-    }
-    .hero {
-      background: transparent;  /* Ensure no background attachment for desktop */
-    }
+  /* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 2rem; /* Reduce padding on mobile */
   }
+
+  .hero h2 {
+    font-size: 2rem; /* Smaller heading for mobile */
+  }
+
+  .hero p {
+    font-size: 1.2rem; /* Smaller text for the paragraph */
+    margin-top: 1rem;
+  }
+}
   
   /* Services Section */
   .services {
@@ -201,52 +205,38 @@ html {
   }
   
   /* CTA Section */
-  .cta {
-    padding: 4rem 2rem;
-    background: var(--color-bg); /* Dark background for CTA */
-    color: var(--color-text);
-    text-align: center;
-    transition: background-color 0.3s ease; /* Smooth transition on hover */
-    cursor: pointer; /* Make the entire section clickable */
-  }
-  
-  .cta:hover {
-    background: var(--color-panel); /* Slightly lighter background on hover */
-  }
+.cta {
+  display: block;
+  padding: 4rem 2rem;
+  background: var(--color-panel);
+  color: var(--color-text);
+  text-align: center;
+  cursor: pointer;
+  border: 3px solid transparent; /* Prevent layout shift */
+  text-decoration: none; /* Remove underline from <a> */
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
 
-  .cta h2 {
-    font-size: 2rem;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    color: var(--color-accent); 
-  }
-  
-  .cta p {
-    font-size: 1rem;
-    color: var(--color-text);
-    max-width: 600px;
-    margin: 0 auto 2rem auto;
-    line-height: 1.6;
-  }
-  
-  .cta-link {
-    display: block;
-    width: 100%;
-    color: var(--color-bg);
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 1rem;
-    background-color: transparent;
-    text-align: center;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .cta-link:hover {
-    background-color: var(--color-text);
-    color: var(--color-bg);
-  }
+.cta:hover {
+  background: var(--color-bg);
+  border-color: var(--color-accent); /* Outline appears on hover */
+}
+
+.cta h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: var(--color-accent);
+}
+
+.cta p {
+  font-size: 1rem;
+  color: var(--color-text);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
   
   
   
@@ -332,19 +322,22 @@ html {
   }
 
   button.submit-btn {
-    background-color: var(--color-bg); /* Button color to match CTA */
-    color: var(--color-text);
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
+  background-color: var(--color-bg); /* Button background */
+  color: var(--color-text);
+  border: 2px solid var(--color-border); /* Visible border */
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
 
-  button.submit-btn:hover {
-    background-color: var(--color-bg); /* Darker orange on hover */
-  }
+button.submit-btn:hover {
+  background-color: var(--color-accent); /* Use an accent color or darker tone */
+  color: var(--color-bg); /* Optional: invert text color on hover */
+  border-color: var(--color-accent-dark); /* Optional: slightly darker border */
+}
+
 
   
 
@@ -452,4 +445,28 @@ footer h3 {
     flex-wrap: wrap;
     gap: 1rem;
   }
+}
+
+
+.instagram {
+  display: block; /* Make it a block-level link so it behaves like a button */
+  text-decoration: none; /* Remove underline from the link */
+}
+
+.insta-cta {
+  display: block;
+  padding: 4rem 2rem;
+  background: var(--color-bg);
+  color: var(--color-text);
+  text-align: center;
+  cursor: pointer;
+  border: 3px solid transparent; /* Prevent layout shift */
+  text-decoration: none; /* Remove underline from <a> */
+  border-color: var(--color-border);
+  transition: background-color 0.3s ease;
+}
+
+.insta-cta:hover {
+  background: var(--color-panel);
+  border-color: var(--color-accent); /* Outline appears on hover */
 }

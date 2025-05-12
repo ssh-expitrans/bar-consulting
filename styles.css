@@ -420,71 +420,80 @@ footer h3 {
   border-color: var(--color-accent); /* Outline appears on hover */
 }
 
+/* General Mobile Styling */
 @media (max-width: 768px) {
-  .your-animated-element {
+
+  /* Remove animation and transitions for mobile */
+  .nav-item {
     animation: none !important;
     transform: none !important;
-    position: static !important; /* if it's using fixed or absolute */
-    background: inherit !important; /* match your site's background */
+    position: static !important; /* Avoid fixed/absolute positioning */
+    background: inherit !important; /* Match background */
   }
-}
 
-/* For mobile screens */
-@media screen and (max-width: 767px) {
-  /* Adjust padding in the CTA section for smaller screens */
+  /* CTA Section Styling */
   .cta {
-    padding: 2rem 1rem; /* Adjust the padding to fit better on mobile */
+    padding: 2rem 1rem; /* Adjust padding for mobile */
   }
 
-  /* Make sure the button takes up the full width on mobile */
   .cta-button {
-    width: 100%; /* Ensure the button spans full width */
-    padding: 1rem; /* Adjust the padding inside the button */
+    width: 100%; /* Button spans full width */
+    padding: 1rem; /* Adequate padding */
   }
 
-  /* Ensure the CTA section content is properly aligned */
   .cta h2, .cta p {
-    font-size: 1.2rem; /* Slightly smaller text */
-    text-align: center; /* Center the text for a better look on mobile */
-  }
-}
-
-@media (max-width: 600px) {
-  .hero-text h1 {
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Smaller text */
+    text-align: center; /* Center text */
   }
 
+  /* Hero Section Adjustments */
   .hero {
-    padding-top: 80px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-    font-size: 0.5rem;
-  }
-
-}
-
-  /* For larger screens (desktop) */
-  @media screen and (max-width: 767px) {
-    body {
-      background-attachment: fixed; /* Parallax effect for mobile */
-    }
-  }
-  
-  /* Mobile-specific adjustments */
-@media (max-width: 768px) {
-  .hero {
-    padding: 4rem 2rem; /* Reduce padding on mobile */
+    padding: 4rem 2rem; /* Reduced padding for mobile */
   }
 
   .hero h2 {
-    font-size: 2rem; /* Smaller heading for mobile */
+    font-size: 2rem; /* Smaller heading */
   }
 
   .hero p {
     font-size: 1.2rem; /* Smaller text for the paragraph */
-    margin-top: 1rem;
+    margin-top: 1rem; /* Margin to space out text */
+  }
+
+  /* Navigation */
+  .nav-links {
+    flex-direction: column; /* Stack items */
+    align-items: center; /* Center align */
+    font-size: 0.9rem; /* Adjust font size for better readability */
+  }
+
+  /* Adjust Hero Text */
+  .hero-text h1 {
+    font-size: 1.5rem; /* Smaller heading for mobile */
+  }
+
+  /* Footer columns should stack on mobile */
+  .footer-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* For smaller devices (up to 600px) */
+@media (max-width: 600px) {
+  .hero h2 {
+    font-size: 1.75rem; /* Further reduce size on very small screens */
+  }
+
+  .hero p {
+    font-size: 1rem; /* Even smaller text */
+  }
+
+  .cta h2, .cta p {
+    font-size: 1.1rem; /* Further reduce text size */
+  }
+
+  .cta-button {
+    padding: 0.8rem; /* Smaller button padding */
   }
 }

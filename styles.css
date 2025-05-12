@@ -11,6 +11,11 @@
 html {
     scroll-behavior: smooth;
   }
+
+  body, html {
+  overflow-x: hidden;
+}
+
   
   /* Base Styles */
   body {
@@ -61,6 +66,16 @@ html {
     color: var(--color-accent);
   }
   
+@media (max-width: 768px) {
+  .your-animated-element {
+    animation: none !important;
+    transform: none !important;
+    position: static !important; /* if it's using fixed or absolute */
+    background: inherit !important; /* match your site's background */
+  }
+}
+
+
   @keyframes navSlideIn {
     to {
       opacity: 1;
@@ -429,7 +444,7 @@ footer h3 {
 
 @media (max-width: 600px) {
   .hero-text h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .hero {
@@ -439,12 +454,9 @@ footer h3 {
   .nav-links {
     flex-direction: column;
     align-items: center;
+    font-size: 0.5rem;
   }
 
-  .some-wide-section {
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
 }
 
 

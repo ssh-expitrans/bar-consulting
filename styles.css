@@ -423,12 +423,19 @@ footer h3 {
 /* General Mobile Styling */
 @media (max-width: 768px) {
 
+  /* Prevent horizontal overflow */
+  body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+
   /* Remove animation and transitions for mobile */
   .nav-item {
     animation: none !important;
     transform: none !important;
+    display: block;
+    opacity: 1 !important;
+    visibility: visible !important;
     position: static !important; /* Avoid fixed/absolute positioning */
-    background: inherit !important; /* Match background */
   }
 
   /* CTA Section Styling */
@@ -439,6 +446,7 @@ footer h3 {
   .cta-button {
     width: 100%; /* Button spans full width */
     padding: 1rem; /* Adequate padding */
+    font-size: 1rem; /* Ensure button text is large enough */
   }
 
   .cta h2, .cta p {
@@ -495,5 +503,6 @@ footer h3 {
 
   .cta-button {
     padding: 0.8rem; /* Smaller button padding */
+    font-size: 1rem; /* Ensure readability on very small devices */
   }
 }

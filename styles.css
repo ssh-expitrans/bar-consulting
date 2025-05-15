@@ -467,7 +467,7 @@ footer h3 {
 
   /* Hero Section Adjustments */
   .hero {
-    padding: 4rem 2rem; /* Reduced padding for mobile */
+    padding: 6rem 2rem 4rem 2rem; /* Top padding increased to 6rem */
   }
 
   .hero h2 {

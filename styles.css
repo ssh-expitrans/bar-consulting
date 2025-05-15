@@ -1,12 +1,22 @@
 :root {
-  --color-bg: #644536; /* Soft, creamy beige background */
-  --color-panel: #B87A4A; /* Rich brown panel for depth */
-  --color-text: #ffdeaa; /* Dark brown text for readability */
-  --color-accent: #d4aa7d; /* Light tan/golden accent for highlights */
-  --color-border: #9e6240; /* Warm, soft border color */
+  --color-bg: #4B2E2A;       /* Dark mocha */
+  --color-panel: #8B5E3C;    /* Earthy brown */
+  --color-text: #FBE8C6;     /* Warm cream */
+  --color-accent: #D48E5C;   /* Burnt gold */
+  --color-border: #7B4B3A;   /* Cocoa */
+  --color-olive: #6E5F45; /* Dusty olive-brown */
 }
 
-
+/*
+Current uploaded
+:root {
+  --color-bg: #644536; 
+  --color-panel: #B87A4A; 
+  --color-text: #ffdeaa; 
+  --color-accent: #d4aa7d; 
+  --color-border: #9e6240; 
+}
+*/
 
 html {
     scroll-behavior: smooth;

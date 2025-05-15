@@ -1,11 +1,12 @@
 :root {
-  --color-bg: #4B2E2A;       /* Dark mocha */
-  --color-panel: #8B5E3C;    /* Earthy brown */
-  --color-text: #FBE8C6;     /* Warm cream */
-  --color-accent: #D48E5C;   /* Burnt gold */
-  --color-border: #7B4B3A;   /* Cocoa */
-  --color-olive: #6E5F45; /* Dusty olive-brown */
+  --color-bg: #F5F1E9;       /* Soft cream background */
+  --color-panel: #8B5E3C;    /* Earthy brown (keep) */
+  --color-text: #4B382A;     /* Dark brown text for readability */
+  --color-accent: #663615;   /* Burnt orange for accents */
+  --color-border: #7B4B3A;   /* Cocoa border */
+  --color-olive: #6E5F45;    /* Dusty olive-brown */
 }
+
 
 /*
 Current uploaded
@@ -35,7 +36,6 @@ html {
     padding: 0;
     overflow-x: hidden;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background: var(--color-primary);
     background-size: cover;
   }
   
@@ -212,7 +212,7 @@ html {
   cursor: pointer;
   border: 3px solid transparent; /* Prevent layout shift */
   text-decoration: none; /* Remove underline from <a> */
-  transition: border-color 0.3s ease, background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.4s ease !important;
 }
 
 .cta:hover {

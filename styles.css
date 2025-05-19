@@ -141,7 +141,7 @@ main {
   font-size: 3rem;
   color: var(--color-text);
   max-width: 50%;
-  margin-left: 2rem;
+  margin-left: 15rem;
   margin-right: auto;
 }
 
@@ -152,7 +152,7 @@ main {
   line-height: 1.6;
   max-width: 50%;
   margin-left: auto;
-  margin-right: 3rem;
+  margin-right: 15rem;
 }
 
   .insta-placeholder {

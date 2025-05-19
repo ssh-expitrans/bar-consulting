@@ -2,7 +2,7 @@
   --color-bg: #fdedd5;  /* Soft cream background */
   --color-panel: #8B5E3C;    /* Earthy brown (keep) */
   --color-text: #6d412a; /* Dark brown text for readability */
-  --color-accent: #663615;   /* Burnt orange for accents */
+  --color-accent: #b46e48;   /* Burnt orange for accents */
   --color-border: #7B4B3A;   /* Cocoa border */
   --color-olive: #6E5F45;    /* Dusty olive-brown */
 }
@@ -81,7 +81,7 @@ main {
     opacity: 0;
     transform: translateY(-40px); /* More dramatic entrance */
     animation: navSlideIn 0.5s ease-out forwards;
-    color: var(--color-accent);
+    color: var(--color-text);
   }
 
 
@@ -113,7 +113,7 @@ main {
   }
   
   nav a:hover {
-    color: var(--color-text); /* Highlight color on hover */
+    color: var(--color-accent); /* Highlight color on hover */
   }
   
   header.navbar {
@@ -216,14 +216,14 @@ main {
 
 .cta:hover {
   background: var(--color-bg);
-  border-color: var(--color-accent); /* Outline appears on hover */
+  border-color: var(--color-text); /* Outline appears on hover */
 }
 
 .cta h2 {
   font-size: 2rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
-  color: var(--color-accent);
+  color: var(--color-text);
 }
 
 .cta p {

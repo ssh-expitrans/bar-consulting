@@ -4,7 +4,7 @@
   --color-text: #6d412a; /* Dark brown text for readability */
   --color-accent: #b46e48;   /* Burnt orange for accents */
   --color-border: #7B4B3A;   /* Cocoa border */
-  --color-olive: #6E5F45;    /* Dusty olive-brown */
+  --color-hover: #e2c69c;
 }
 
 
@@ -15,6 +15,7 @@ html {
   body, html {
   overflow-x: hidden;
   max-width: 100%;
+  scroll-behavior: smooth;
 }
 
   
@@ -71,7 +72,7 @@ main {
   }
   
   .logo img {
-  max-width: 180px;
+  max-width: 160px;
   height: auto;
   display: block;
 }
@@ -107,7 +108,7 @@ main {
   
   nav a {
     text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     font-weight: 600;
     transition: color 0.3s ease;
   }
@@ -205,12 +206,13 @@ main {
 .cta {
   display: block;
   padding: 4rem 2rem;
-  background: var(--color-panel);
+  background: var(--color-hover);
   color: var(--color-text);
   text-align: center;
   cursor: pointer;
   border: 3px solid transparent; /* Prevent layout shift */
   text-decoration: none; /* Remove underline from <a> */
+ border-color: var(--color-text); /* Outline appears on hover */
   transition: background-color 0.3s ease, color 0.4s ease !important;
 }
 
@@ -330,9 +332,9 @@ main {
 }
 
 button.submit-btn:hover {
-  background-color: var(--color-accent); /* Use an accent color or darker tone */
+  background-color: var(--color-hover);
   color: var(--color-bg); /* Optional: invert text color on hover */
-  border-color: var(--color-accent-dark); /* Optional: slightly darker border */
+  border-color: var(--color-text);
 }
 
 
@@ -426,8 +428,8 @@ footer h3 {
 }
 
 .insta-cta:hover {
-  background: var(--color-panel);
-  border-color: var(--color-accent); /* Outline appears on hover */
+  background: var(--color-hover);
+  border-color: var(--color-text);
 }
 
 
@@ -466,7 +468,7 @@ footer h3 {
 
 /* Bio image styling */
 .bio-image img {
-  max-width: 200px;
+  max-width: 300px;
   object-fit: cover;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   border-radius: 8px;
@@ -480,7 +482,7 @@ footer h3 {
 }
 
 .company-bio {
-  max-width: 700px;      /* or whatever width you want */
+  max-width: 900px;      /* or whatever width you want */
   margin-left: auto;
   margin-right: auto;
 }
@@ -488,10 +490,29 @@ footer h3 {
 .bio-text-co p {
   font-size: 1.1rem;
   line-height: 1.6;
-  max-width: 500px;
+  max-width: 900px;
   margin: 0 auto; /* optional, centers paragraph block */
   text-align: center;
 }
+
+.fo {
+  font-style: italic;
+
+}
+
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 
 
 /* Responsive for mobile: stack image + text vertically */

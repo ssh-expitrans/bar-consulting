@@ -33,14 +33,14 @@
         <!-- Logo is clickable and links to the home page -->
         <div class="logo">
           <a href="#">
-            <img src="TH.svg" alt="Bar Consulting Logo" />
+            <img src="TH.svg" alt="Tailored Hospitalities Logo" />
           </a>
         </div>
 
       <nav>
             <ul>
                 <li><a class="nav-item" href="#services">SERVICES</a></li>
-                <li><a class="nav-item" href="#cta">CONTACT</a></li>
+                <li><a class="nav-item" href="form.html">CONTACT</a></li>
                 <li><a class="nav-item" href ="about.html">ABOUT US</a></li>
 
               <!--<li><a class="nav-item" href="#faq-container">FAQ</a></li>-->
@@ -71,7 +71,7 @@
 
 
         <!-- Services Section -->
-        <section id="services" class="services" >
+        <section id="services" class="services fade-up">
           <h2>Our Services</h2>
           <div class="service-grid">
             <div class="service-box">
@@ -96,7 +96,7 @@
         </a>
 
 
-        <div class="faq-container">
+        <div class="faq-container fade-up">
             <h2>FREQUENTLY ASKED QUESTIONS</h2>
           
             <div class="faq-item">
@@ -211,13 +211,15 @@
       window.addEventListener("load", () => {
         const items = document.querySelectorAll(".nav-item");
         items.forEach((item, index) => {
-          item.style.animationDelay = `${index * 0.2}s`;
+          item.style.animationDelay = `${index * 0.3}s`;
         });
       });
     </script>
 
 
 <script src="faq.js"></script>
+<script src="misc.js"></script>
+
 
 </body>
 </html>

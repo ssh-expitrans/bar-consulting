@@ -479,6 +479,21 @@ footer h3 {
   max-width: 500px;
 }
 
+.company-bio {
+  max-width: 700px;      /* or whatever width you want */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bio-text-co p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 auto; /* optional, centers paragraph block */
+  text-align: center;
+}
+
+
 /* Responsive for mobile: stack image + text vertically */
 @media (max-width: 768px) {
   .bio-sub {
@@ -496,60 +511,54 @@ footer h3 {
   }
 }
 
-/* Desktop styles by default */
-
 .timeline {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  max-width: 700px;
-  margin: 2rem auto 0 auto;
+  align-items: center;
   position: relative;
-  padding-left: 0;
-  border-left: none;
-  color: var(--color-text);
-}
-
-.timeline-item {
-  position: relative;
-  flex: 1;
-  padding-left: 0;
-  margin-bottom: 3rem; /* example spacing between timeline items */
+  max-width: 800px;
+  margin: 4rem auto;
   text-align: center;
 }
 
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--color-border, #ccc);
+  z-index: 0;
+}
 
+.timeline-segment {
+  position: relative;
+  width: 100%;
+}
 
 .timeline-date {
+  margin-bottom: 1rem;
+  color: var(--color-text);
   font-weight: bold;
-  margin-bottom: 1.5rem; /* more space below date */
-  color: var(--color-highlight);
 }
 
-
-
-/* Mobile overrides only */
-
-@media (max-width: 768px) {
-  .timeline {
-    flex-direction: column;
-    max-width: none;
-    margin: 2rem 1rem 0 1rem;
-    padding-left: 20px;
-  }
-
-  .timeline-item {
-    padding-left: 1.5rem;
-    margin-bottom: 1.5rem;
-    text-align: left;
-  }
-
-  .timeline-date {
-    font-weight: bold;
-    margin-bottom: 0.25rem;
-    color: var(--color-text);
-  }
+.timeline-marker {
+  width: 16px;
+  height: 16px;
+  background: var(--color-bg);
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  border: 3px solid var(--color-text);
 }
+
+.timeline-description {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
 
 
 

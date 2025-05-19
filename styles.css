@@ -1,23 +1,12 @@
 :root {
-  --color-bg: #F5F1E9;       /* Soft cream background */
+  --color-bg: #fdedd5;  /* Soft cream background */
   --color-panel: #8B5E3C;    /* Earthy brown (keep) */
-  --color-text: #4B382A;     /* Dark brown text for readability */
+  --color-text: #6d412a; /* Dark brown text for readability */
   --color-accent: #663615;   /* Burnt orange for accents */
   --color-border: #7B4B3A;   /* Cocoa border */
   --color-olive: #6E5F45;    /* Dusty olive-brown */
 }
 
-
-/*
-Current uploaded
-:root {
-  --color-bg: #644536; 
-  --color-panel: #B87A4A; 
-  --color-text: #ffdeaa; 
-  --color-accent: #d4aa7d; 
-  --color-border: #9e6240; 
-}
-*/
 
 html {
     scroll-behavior: smooth;
@@ -32,6 +21,7 @@ html {
   /* Base Styles */
   body {
     background-color: var(--color-bg);
+    color: var(--color-text);
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -52,24 +42,40 @@ html {
     background-color: var(--color-bg);
   }
 
+  html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; /* grows to fill available space pushing footer down */
+}
+
+
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--color-panel);
+    background-color: var(--color-bg);
     padding: 1.5rem 2rem;
     border-bottom: 2px solid var(--color-accent);  /* Add a thin line at the bottom of the nav */
     box-sizing: border-box;
     z-index: 1000; /* Keeps the header above other content */
   }
   
-  .logo a {
-    font-size: 1.5rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--color-text); /* Light logo color for contrast */
-  }
+  .logo img {
+  max-width: 180px;
+  height: auto;
+  display: block;
+}
+
 
   .nav-item {
     opacity: 0;
@@ -111,7 +117,7 @@ html {
   }
   
   header.navbar {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -119,35 +125,48 @@ html {
   }
 
   .hero {
-    min-height: 60svh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    margin-top: 80px;
-    padding: 6rem 2rem;
-    color: var(--color-text);
-  }
-  
-  .hero h2 {
-    text-align: left;
-    align-self: flex-start;
-    font-size: 3rem;
-    color: var(--color-text);
-    max-width: 40%;
-  }
-  
-  .hero p {
-    text-align: right;
-    align-self: flex-end;
-    max-width: 50%;
-    font-size: 1.2rem;
-    line-height: 1.6;
-  }
-  
+  min-height: 60svh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 60px;
+  padding: 5rem 0.2rem;
+  color: var(--color-text);
+}
 
-  
-  /* Services Section */
+.hero h2 {
+  text-align: left;
+  align-self: flex-start;
+  font-size: 3rem;
+  color: var(--color-text);
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero p {
+  text-align: right;
+  align-self: flex-end;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  .insta-placeholder {
+  height: 300px;
+  background: repeating-linear-gradient(45deg, #eee, #eee 10px, #ddd 10px, #ddd 20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-style: italic;
+  border-radius: 12px;
+}
+
+
+    /* Services Section */
   .services {
     background: transparent; 
     padding: 4rem 2rem;
@@ -169,6 +188,8 @@ html {
     max-width: 1000px;
     margin: 0 auto;
   }
+
+
 /* Ensure all elements use the border-box model */
 *,
 *::before,
@@ -177,30 +198,8 @@ html {
 }
 
   
-  .service-box {
-    background-color: var(--color-panel); /* Dark background for service boxes */
-    padding: 2rem;
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    transition: all 0.3s ease;
-  }
+
   
-  .service-box:hover {
-    box-shadow: 0 4px 10px rgba(255, 253, 221, 0.3);
-  }
-  
-  .service-box h3 {
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    margin-bottom: 0.75rem;
-    color: var(--color-text); /* White color for service titles */
-  }
-  
-  .service-box p {
-    color: var(--color-text); /* Light gray text */
-    line-height: 1.5;
-    font-size: 0.95rem;
-  }
   
   /* CTA Section */
 .cta {
@@ -290,7 +289,7 @@ html {
     padding: 2rem;
     background-color: var(--color-bg); /* Dark background for form */
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(107, 107, 107, 0.2);
   }
 
   .form-group {
@@ -430,6 +429,181 @@ footer h3 {
   background: var(--color-panel);
   border-color: var(--color-accent); /* Outline appears on hover */
 }
+
+
+/* About Us page */
+/* About section container */
+.bio-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  color: var(--color-text);
+}
+
+/* Each block inside About */
+.bio-block {
+  margin-bottom: 3rem;
+}
+
+/* Header style */
+.bio-block h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Bio sub container: image + text side-by-side */
+.bio-sub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Bio image styling */
+.bio-image img {
+  max-width: 200px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  border-radius: 8px;
+}
+
+/* Bio text paragraph */
+.bio-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+/* Responsive for mobile: stack image + text vertically */
+@media (max-width: 768px) {
+  .bio-sub {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bio-image img {
+    max-width: 120px;
+    margin-bottom: 1rem;
+  }
+
+  .bio-text p {
+    max-width: 100%;
+  }
+}
+
+/* Timeline styles */
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  margin: 2rem auto 0 auto;
+  position: relative;
+  padding-left: 20px;
+  border-left: 3px solid var(--color-border);
+  color: var(--color-text);
+}
+
+/* Timeline items */
+.timeline-item {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Dots on timeline */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -11px;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  background: var(--color-highlight);
+  border: 3px solid var(--color-panel);
+}
+
+/* Timeline date styling */
+.timeline-date {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  display: block;
+  color: var(--color-highlight);
+}
+
+/* Mobile: simple vertical list */
+@media (max-width: 768px) {
+  .timeline {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .timeline-item {
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .timeline-item::before {
+    display: none;
+  }
+
+  .timeline-date {
+    color: var(--color-text);
+    font-weight: normal;
+  }
+}
+
+/* Desktop: horizontal timeline */
+@media (min-width: 769px) {
+  .timeline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .timeline-item {
+    position: relative;
+    flex: 1;
+    padding-left: 0;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  /* Connecting horizontal line */
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--color-border);
+    z-index: 0;
+  }
+
+  /* Dots centered above text */
+  .timeline-item::before {
+    content: '';
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: 0 auto 1rem auto;
+    width: 20px;
+    height: 20px;
+    background: var(--color-highlight);
+    border-radius: 50%;
+    border: 3px solid var(--color-panel);
+    z-index: 1;
+  }
+}
+
+
 
 /* General Mobile Styling */
 @media (max-width: 768px) {

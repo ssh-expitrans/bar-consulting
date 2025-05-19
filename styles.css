@@ -141,7 +141,7 @@ main {
   font-size: 3rem;
   color: var(--color-text);
   max-width: 50%;
-  margin-left: auto;
+  margin-left: 2rem;
   margin-right: auto;
 }
 
@@ -152,7 +152,7 @@ main {
   line-height: 1.6;
   max-width: 50%;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: 3rem;
 }
 
   .insta-placeholder {
@@ -513,7 +513,14 @@ footer h3 {
 }
 
 
-
+  /* Hide hamburger on desktop */
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
 /* Responsive for mobile: stack image + text vertically */
 @media (max-width: 768px) {
@@ -530,61 +537,6 @@ footer h3 {
   .bio-text p {
     max-width: 100%;
   }
-}
-
-.timeline {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  max-width: 800px;
-  margin: 4rem auto;
-  text-align: center;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--color-border, #ccc);
-  z-index: 0;
-}
-
-.timeline-segment {
-  position: relative;
-  width: 100%;
-}
-
-.timeline-date {
-  margin-bottom: 1rem;
-  color: var(--color-text);
-  font-weight: bold;
-}
-
-.timeline-marker {
-  width: 16px;
-  height: 16px;
-  background: var(--color-bg);
-  border-radius: 50%;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-  border: 3px solid var(--color-text);
-}
-
-.timeline-description {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-}
-
-
-
-
-/* General Mobile Styling */
-@media (max-width: 768px) {
 
   /* Prevent horizontal overflow */
   body {
@@ -597,16 +549,75 @@ footer h3 {
     display: block;
   }
 
-
   /* Remove animation and transitions for mobile */
   .nav-item {
     animation: none !important;
     transform: none !important;
     display: block;
+    font-size: 0.8rem;
     opacity: 1 !important;
     visibility: visible !important;
     position: static !important; /* Avoid fixed/absolute positioning */
   }
+
+  /* Show hamburger */
+  .nav-toggle {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text);
+  }
+
+  /* Hide nav by default */
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%; /* directly under navbar */
+    left: 0;
+    width: 100%;
+    background-color: var(--color-bg);
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  /* Show nav when active */
+  nav.active {
+    display: block;
+  }
+
+  /* Optional styling for mobile nav */
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: var(--color-bg); /* or your preferred bg */
+    text-align: center !important;
+    display: block !important;
+  }
+
+  nav ul li {
+    padding: 1rem;
+  }
+
+  nav ul li a {
+  display: inline-block;
+  width: auto;
+  padding: 1rem 0;
+  text-align: center;
+  margin: 0 auto;
+  
+}
+
+    header.navbar {
+    position: relative;
+    z-index: 1000;
+    }
+}
+
+
 
   /* CTA Section Styling */
   .cta {
@@ -642,7 +653,7 @@ footer h3 {
   .nav-links {
     flex-direction: column; /* Stack items */
     align-items: center; /* Center align */
-    font-size: 0.9rem; /* Adjust font size for better readability */
+    font-size: 0.5rem; /* Adjust font size for better readability */
   }
 
   /* Adjust Hero Text */
@@ -655,7 +666,7 @@ footer h3 {
     flex-direction: column;
     align-items: center;
   }
-}
+
 
 /* For smaller devices (up to 600px) */
 @media (max-width: 600px) {

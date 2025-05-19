@@ -28,3 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   faders.forEach(el => appearOnScroll.observe(el));
 });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    toggleButton.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  });

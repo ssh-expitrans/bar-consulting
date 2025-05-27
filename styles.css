@@ -173,7 +173,6 @@ main {
     background: transparent; 
     padding: 4rem 2rem;
     text-align: center;
-    border-bottom: 2px solid var(--color-border);
   }
   
   .services h2 {

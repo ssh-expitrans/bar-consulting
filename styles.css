@@ -491,8 +491,7 @@ footer h3 {
   font-size: 1.1rem;
   line-height: 1.6;
   max-width: 900px;
-  margin: 0 auto; /* optional, centers paragraph block */
-  text-align: center;
+  text-align: left;
 }
 
 .fo {

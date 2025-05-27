@@ -367,6 +367,7 @@ button.submit-btn:hover {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    transition: color 0.3s ease; /* Add this line for smooth color transition */
   }
   
   .faq-answer {
@@ -386,9 +387,16 @@ button.submit-btn:hover {
   .arrow {
     display: inline-block;
     transition: transform 0.3s ease;
+    transition: color 0.3s ease; /* Add this line for smooth color transition */
   }
   
+  .arrow:hover {
+    color: var(--color-hover);
+  }
   
+  .faq-question:hover {
+    color: var(--color-hover);
+  }
 
   .faq-item.active .arrow {
     transform: rotate(90deg);
@@ -535,10 +543,11 @@ footer h3 {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
+  transition: color 0.3s ease; /* Add this line for smooth color transition */
 }
 
 .back-to-top:hover {
-  text-decoration: underline;
+  color: var(--color-hover);
 }
 
 

@@ -555,8 +555,10 @@ footer h3 {
 @media (max-width: 768px) {
   
   .hero {
-    padding: 4rem 1rem;
+    padding: 1rem;
     align-items: center;
+    min-height: 1rem;
+    margin-bottom: 2.5rem;
   }
 
   .hero h2,
@@ -732,6 +734,10 @@ footer h3 {
 
 /* For smaller devices (up to 600px) */
 @media (max-width: 600px) {
+  .hero {
+    padding: 0.5rem;
+  }
+
   .hero h2 {
     font-size: 1.75rem; /* Further reduce size on very small screens */
   }

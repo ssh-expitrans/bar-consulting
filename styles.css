@@ -66,7 +66,7 @@ main {
     align-items: center;
     background-color: var(--color-bg);
     padding: 1.5rem 2rem;
-    border-bottom: 2px solid var(--color-accent);  /* Add a thin line at the bottom of the nav */
+    border-bottom: 2px solid var(--color-text);  /* Add a thin line at the bottom of the nav */
     box-sizing: border-box;
     z-index: 1000; /* Keeps the header above other content */
   }
@@ -332,8 +332,8 @@ main {
 }
 
 button.submit-btn:hover {
-  background-color: var(--color-hover);
-  color: var(--color-bg); /* Optional: invert text color on hover */
+  background-color: var(--color-accent);
+  color: var(--color-hover); /* Optional: invert text color on hover */
   border-color: var(--color-text);
 }
 
@@ -391,11 +391,11 @@ button.submit-btn:hover {
   }
   
   .arrow:hover {
-    color: var(--color-hover);
+    color: var(--color-accent);
   }
   
   .faq-question:hover {
-    color: var(--color-hover);
+    color: var(--color-accent);
   }
 
   .faq-item.active .arrow {
@@ -547,7 +547,7 @@ footer h3 {
 }
 
 .back-to-top:hover {
-  color: var(--color-hover);
+  color: var(--color-accent);
 }
 
 

@@ -52,7 +52,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 main {
@@ -522,6 +522,27 @@ footer h3 {
   border: none;
   cursor: pointer;
 }
+
+.back-to-top-wrapper {
+  text-align: center;
+  margin: 1.5rem 0 0 0;
+}
+
+.back-to-top {
+  font-size: 1.1rem;
+  color: var(--color-border);
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.back-to-top:hover {
+  text-decoration: underline;
+}
+
 
 /* Responsive for mobile: stack image + text vertically */
 @media (max-width: 768px) {
